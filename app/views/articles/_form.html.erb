@@ -1,0 +1,25 @@
+<%= form_with(model: @article, local: true) do |f| %>
+  <% if @article.errors.any? %>
+    <h2><%= pluralize(@article.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+
+    <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :text, "Content" %>
+    <%= f.text_area :text %>
+  </div>
+
+  <div>
+    <%= f.submit "Submit", disable_with: 'Submiting...' %>    
+  </div>
+<% end %>

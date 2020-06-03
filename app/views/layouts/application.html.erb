@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %> | 
+    <%= link_to "Write new article", articles_new_path %>
+    <% if user_signed_in? %>
+       | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
