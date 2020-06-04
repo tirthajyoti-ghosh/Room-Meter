@@ -15,6 +15,17 @@
   </div>
 
   <div>
+    <p>Existing categories:</p>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>      
+    </ul>
+
+    <p>You can use a category from here or add a new one</p>
+  </div>
+
+  <div>
     <%= f.label :category_list, "Categories" %>
     <%= f.text_field :category_list, placeholder: 'Category1, Category2, ...' %>
   </div>

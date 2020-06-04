@@ -11,7 +11,7 @@ class Article < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
 
   def category_list=(category_string)
-    category_names = category_string.split(",").collect{|s| s.strip.downcase}.uniq
+    category_names = category_string.split(",").collect{|s| s.strip.capitalize}.uniq
     new_or_found_categories = category_names.collect { |name| Category.find_or_create_by(name: name) }
     self.categories = new_or_found_categories
   end

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = current_user.articles.build
-    @categories = Category.order(priority: :desc).map { |category| [category.name, category.id] }
+    @categories = Category.order(priority: :desc)
   end
 
   def create
