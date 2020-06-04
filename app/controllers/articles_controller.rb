@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = current_user.articles.build
+    @categories = Category.order(priority: :desc).map { |category| [category.name, category.id] }
   end
 
   def create
@@ -23,6 +24,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :category_list)
   end
 end
