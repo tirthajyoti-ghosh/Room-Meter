@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:author).all
+    @categories = Category.all
   end
 
   private
