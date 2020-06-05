@@ -1,12 +1,23 @@
 <h1>Articles</h1>
 
 <h3>Max voted article</h3>
-<h1><%= max_voted_article.title %></h1>
+<h4><%= max_voted_article.title %></h4>
+<%= image_tag(max_voted_article.image) %>
 <p>by <%= max_voted_article.author.name %></p>
 <p><%= max_voted_article.text %></p>
 
 <ul>
   <% @categories.each do |category| %>
-    <li><%= category.name %></li>
+    <% unless category.articles[0].nil? %>    
+      <li>      
+        <%= link_to category_path(category) do %>
+          <%= content_tag(:h4, category.name) %>
+        <% end %>
+
+        <%= content_tag(:h5, category.articles[0].title) %>
+        
+        <%= image_tag(category.articles[0].image) %>
+      </li>
+    <% end %>
   <% end %>
 </ul>

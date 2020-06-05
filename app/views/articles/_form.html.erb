@@ -15,6 +15,11 @@
   </div>
 
   <div>
+    <%= f.label :image, "Image URL" %>
+    <%= f.text_field :image %>
+  </div>
+
+  <div>
     <p>Existing categories:</p>
     <ul>
       <% @categories.each do |category| %>

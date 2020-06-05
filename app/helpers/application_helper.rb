@@ -4,8 +4,10 @@ module ApplicationHelper
   end
 
   def max_voted_article
-    max_vote_article_id = Vote.group(:article_id).count.max[0]
-    Article.find(max_vote_article_id)
+    if Vote.any?
+      max_vote_article_id = Vote.group(:article_id).count.max[0]
+      Article.find(max_vote_article_id)
+    end
   end
 
   def display_vote_for(article)
