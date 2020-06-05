@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <header class="header">
+      <a href="<%= root_path %>" id="logo">LifeStyle</a>
+      <nav class="navbar">
+        <ul class="nav-list">
+          
+        </ul>
+      </nav>
+    </header>
     <%= link_to "Home", root_path %> | 
     <%= link_to "Write new article", new_article_path %>
     <% if user_signed_in? %>

@@ -5,14 +5,19 @@ module ApplicationHelper
 
   def max_voted_article
     if Vote.any?
-      max_vote_article_id = Vote.group(:article_id).count.max[0]
+      vote_hash = Vote.group(:article_id).count
+      max_value = vote_hash.values.max
+      max_vote_article_id = vote_hash.key(max_value)
       Article.find(max_vote_article_id)
     end
   end
 
   def display_vote_for(article)
+    vote_count = article.votes.count
     unless already_voted?(article)
-      link_to("Vote", article_votes_path(article), method: :post)
+      link_to("#{pluralize(vote_count, "vote")}", article_votes_path(article), method: :post)
+    else
+      content_tag(:p, "#{pluralize(vote_count, "vote")}")
     end
   end
 

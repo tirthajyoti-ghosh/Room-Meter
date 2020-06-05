@@ -4,8 +4,10 @@
   <% @category.articles.each do |article| %>
     <h4><%= article.title %></h4>
     <%= image_tag(article.image, size: "200x150", alt: "#{article.title}") %>
+    <p><%= article.author.name %></p>
     <p><%= truncate(article.text) %></p>
-  <hr>
-  <br>
+    <%= display_vote_for(article) %>
+    <hr>
+    <br>
   <% end %>
 </ul>
