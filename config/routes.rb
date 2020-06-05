@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'categories/show'
   root 'articles#index'
 
   resources :articles, only: [:new, :create, :index] do

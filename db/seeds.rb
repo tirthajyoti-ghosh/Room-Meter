@@ -1,5 +1,7 @@
 5.times do
-  Category.create(name: Faker::Science.element, priority: rand(1..5))
+  Category.create(
+    name: Faker::Science.element, 
+    priority: rand(1..5))
 end
 
 15.times do |n|
@@ -11,7 +13,12 @@ end
     password_confirmation: 'password'
   )
   user = User.find(n+1)
-  user.articles.create!(title: Faker::Company.industry, text: Faker::Company.bs, image: "https://source.unsplash.com/random/800x600", category_list: Category.pluck(:name).sample)
+
+  user.articles.create!(
+    title: Faker::Company.industry, 
+    text: Faker::Lorem.paragraph, 
+    image: Faker::LoremFlickr.image(size: "400x300"), 
+    category_list: Category.pluck(:name).sample)
 end
 
 5.times do |n|

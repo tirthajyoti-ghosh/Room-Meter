@@ -6,7 +6,7 @@ class Article < ApplicationRecord
   has_many :categories, through: :categorizations
 
   validates :title, presence: true, length: {maximum: 50}
-  validates :text, presence: true, length: {maximum: 1000}
+  validates :text, presence: true, length: {maximum: 10000}
   validates :image, presence: true
 
   default_scope -> { order(created_at: :desc) }
