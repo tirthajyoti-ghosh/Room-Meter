@@ -13,3 +13,197 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+body .header {
+  display: flex;
+  background-color: white;
+  padding: 25px 20px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar #logo {
+  color: #4E443E;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+}
+
+.navbar #logo::after {
+  content: '';
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #FA6000;
+}
+
+.navbar .nav-list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 15%;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.navbar .account {
+  width: 10%;
+  color: #847F7A;
+}
+
+.nav-list .nav-link {
+  color: #847F7B;
+}
+
+.nav-list .active {
+  color: #FA6000;
+}
+
+.account .name {
+  border-right: solid #847F7B 2px;
+  padding-right: 10px;
+}
+
+.account .logout:hover {
+  color: #535353;
+}
+
+main .gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.85;
+}
+
+main .gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+}
+
+.featured-articles {
+  margin: 2px 0 80px;
+  height: 65vh;
+}
+
+.featured-articles svg {
+  position: relative;
+  top: 3px;
+  width: 25px;
+  height: 15px;
+}
+
+.featured-articles .article-big {  
+  width: 75%;
+  float: left;
+  color: #fff;
+  position: relative;
+  height: 100%;
+}
+
+.featured-articles .article-big::before {  
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(232,7,47,1) 25%, rgba(132,127,123,1) 25%);
+}
+
+.article-big #logo {
+  position: relative;
+  z-index: 2;
+  width: 471px;
+  height: 112px;
+  margin: 20px;
+}
+
+.article-big .date {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+  font-size: 0.95rem;
+}
+
+.featured-articles .content {
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+}
+
+.weather .content {
+  top: 0;
+}
+
+.content .article-category {
+  font-size: 1rem;
+}
+
+.content h1 {
+  font-size: 20px;
+  color: #FA6000;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.content .text,
+.content .time {
+  position: relative;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.text a:hover {
+  color: #fff;
+}
+
+.featured-articles .weather {
+  background: url("https://images.unsplash.com/photo-1555588746-13edde80e4a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80") no-repeat;
+  background-size: cover;
+  position: relative;
+  float: right;
+  width: 25%;
+  color: #fff;
+  height: 100%;
+}
+
+.weather .weather-icon {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+.weather-icon svg {
+  width: 200px;
+  height: 200px;
+  fill: #fff;
+}

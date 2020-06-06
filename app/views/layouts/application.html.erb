@@ -7,25 +7,35 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">
-      <a href="<%= root_path %>" id="logo">LifeStyle</a>
       <nav class="navbar">
+        <a href="<%= root_path %>" id="logo">liFEsTlYe</a>
+
         <ul class="nav-list">
-          
+          <li><a href="<%= root_path %>" class="nav-link active">home</a></li>
+          <li><a href="<%= new_article_path %>" class="nav-link">write new article</a></li>
+        </ul>
+
+        <ul class="nav-list account">
+          <% if user_signed_in? %>
+            <li class="nav-link name"><%= current_user.name %></li>
+            <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "login", new_user_session_path, class: "nav-link name" %></li>
+            <li><%= link_to "register", new_user_registration_path, class: "nav-link" %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
-    <%= link_to "Home", root_path %> | 
-    <%= link_to "Write new article", new_article_path %>
-    <% if user_signed_in? %>
-       | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% end %>
 
-    <p id="notice"><%= notice %></p>
+    <main>
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
+    </main>
     
-    <%= yield %>
   </body>
 </html>
