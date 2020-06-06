@@ -46,7 +46,7 @@ body .header {
   width: 100%;
 }
 
-.navbar #logo {
+body .logo {
   color: #4E443E;
   font-size: 25px;
   font-weight: bold;
@@ -54,7 +54,7 @@ body .header {
 
 }
 
-.navbar #logo::after {
+body .logo::after {
   content: '';
   display: inline-block;
   height: 10px;
@@ -103,15 +103,11 @@ main .gradient {
   bottom: 0;
   left: 0;
   opacity: 0.85;
-}
-
-main .gradient {
   background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
 }
 
 .featured-articles {
-  margin: 2px 0 80px;
-  height: 65vh;
+  height: 60vh;
 }
 
 .featured-articles svg {
@@ -206,4 +202,29 @@ main .gradient {
   width: 200px;
   height: 200px;
   fill: #fff;
+}
+
+main .categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories .category {
+  height: 230px;
+  width: 25%;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.category .title {
+  font-size: 16px;
+  border-bottom: solid #FEFE00 2px;
+  display: inline;
+}
+
+.category .article-title {
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
 }
