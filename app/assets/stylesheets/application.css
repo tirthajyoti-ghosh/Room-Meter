@@ -228,3 +228,21 @@ main .categories {
   position: absolute;
   bottom: 20px;
 }
+
+body .footer {
+  display :flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #4E443E;
+}
+
+.footer .logo {
+  color: #fff;
+}
+
+.footer .footer-links {
+  display: flex;
+  padding-top: 6px;
+  font-size: 14px;
+  color: #fff;
+}
