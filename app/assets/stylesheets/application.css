@@ -126,7 +126,8 @@ main .gradient {
 }
 
 .featured-articles .article-big::before,
-main .article-form::before {  
+main .article-form::before,
+main .category-articles::before {  
   content: '';
   display: block;
   position: absolute;
@@ -135,7 +136,8 @@ main .article-form::before {
   background: linear-gradient(90deg, rgba(232,7,47,1) 25%, rgba(132,127,123,1) 25%);
 }
 
-main .article-form::before {
+main .article-form::before,
+main .category-articles::before {
   background: linear-gradient(90deg, rgba(232,7,47,1) 18.5%, rgba(132,127,123,1) 18.5%);
 }
 
@@ -382,4 +384,84 @@ body .footer {
 .category-list .category:hover {
   background-color:#FA6000;
   color: #fff;
+}
+
+main .category-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-articles .article-row {
+  display: flex;
+}
+
+.article-row .image {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.article-row:nth-child(even) .image {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.article-row .article-body {
+  width: 48%;
+  height: 275px;
+  margin: 10px 15px 10px 52%;
+}
+
+.article-row:nth-child(even) .article-body {
+  margin: 10px 52% 10px 15px;
+}
+
+.article-body h2 {
+  color: #F99B00;
+  font-size: 17px;
+  letter-spacing: 1px;
+  border-bottom: solid #F99B00 2px;
+  display: inline-block;
+  margin: 10px 0 15px 0;
+  padding: 0 3px;
+}
+
+.article-body h3 {
+  color: #4E443E;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding: 0 3px;
+}
+
+.article-body .author {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.author .name {
+  font-size: 15px;
+  color: #847F7A;
+  font-style: normal;
+}
+
+.article-body .text {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  margin-bottom: 20px;
+}
+
+.article-body .vote {
+  color: #847F7B;
+}
+
+.article-body .vote:hover {
+  color: #F99B00;
+}
+
+.article-body .voted {
+  color: #F99B00;
 }
