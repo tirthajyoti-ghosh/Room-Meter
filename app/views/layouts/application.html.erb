@@ -17,8 +17,8 @@
         <a href="<%= root_path %>" class="logo">liFEsTlYe</a>
 
         <ul class="nav-list">
-          <li><a href="<%= root_path %>" class="nav-link active">home</a></li>
-          <li><a href="<%= new_article_path %>" class="nav-link">write new article</a></li>
+          <li><%= menu_link_to 'home', root_path %></li>
+          <li><%= menu_link_to 'write new article', new_article_path %></li>
         </ul>
 
         <ul class="nav-list account">
@@ -42,16 +42,16 @@
       <a href="/" class="logo">liFEsTlYe</a>
 
       <ul class="footer-links">
-        <li><a href="/">Privacy Policy</a></li>
-        <li><a href="/">Terms &amp; Conditions</a></li>
+        <li><a href="/" class="active">Privacy Policy</a></li>
+        <li><a href="/" class="active">Terms &amp; Conditions</a></li>
         <li>Copyright 2020. All rights reserved</li>
       </ul>
 
       <ul class="footer-links social-links">
         <li>Connect with us:</li>
-        <li><a href="/"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="/" class="icon"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="/" class="icon"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="/" class="icon"><i class="fab fa-facebook-f"></i></a></li>
       </ul>
     </footer>
   </body>

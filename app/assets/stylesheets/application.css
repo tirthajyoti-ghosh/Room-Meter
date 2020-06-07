@@ -232,6 +232,7 @@ main .categories {
 body .footer {
   display :flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
   background-color: #4E443E;
 }
@@ -245,4 +246,26 @@ body .footer {
   padding-top: 6px;
   font-size: 14px;
   color: #fff;
+  width: 32%;
+  justify-content: space-between;
+}
+
+.footer .social-links {
+  width: 18%;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.footer-links .active {
+  color: #FA6000;
+}
+
+.social-links .icon {
+  display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #FA6000;
+    padding: 8px 11px;
+    font-size: 17px;
 }
