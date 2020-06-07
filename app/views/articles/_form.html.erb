@@ -11,41 +11,41 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title, "Title" %>
+    <%= f.label :title, "Title:*" %>
     <br>
-    <%= f.text_field :title, class: "input", placeholder: "Your article's title" %>
+    <%= f.text_field :title, class: "input", placeholder: "Your article's title", required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :image, "Image URL" %>
+    <%= f.label :image, "Image URL:*" %>
     <br>
-    <%= f.text_field :image, class: "input", placeholder: "Your article's image URL" %>
+    <%= f.text_field :image, class: "input", placeholder: "Your article's image URL", required: true %>
   </div>
 
   <div class="field">
-    <p>Existing categories:</p>
-    <ul>
+    <label>Existing categories:</label>
+    <ul class="category-list">
       <% @categories.each do |category| %>
-        <li><%= category.name %></li>
+        <li class="category"><%= category.name %></li>
       <% end %>      
     </ul>
 
-    <p>You can use a category from here or add a new one</p>
+    <p class="suggestion">You can use a category from here or add a new one</p>
   </div>
 
   <div class="field">
-    <%= f.label :category_list, "Categories" %>
+    <%= f.label :category_list, "Categories:*" %>
     <br>
-    <%= f.text_field :category_list, placeholder: "#{@categories[0].name}, #{@categories[1].name}, ...", class: "input" %>
+    <%= f.text_field :category_list, placeholder: "#{@categories[0].name}, #{@categories[1].name}, ...", class: "input", required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :text, "Content" %>
+    <%= f.label :text, "Content:*" %>
     <br>
-    <%= f.text_area :text, class: "text-area", rows: "20", placeholder: "Start writing..." %>
+    <%= f.text_area :text, class: "text-area", rows: "15", placeholder: "Start writing...", required: true %>
   </div>
 
   <div class="field">
-    <%= f.submit "Submit", disable_with: 'Submiting...' %>    
+    <%= f.submit "Submit", disable_with: 'Submiting...', class: "submit-btn" %>    
   </div>
 <% end %>
