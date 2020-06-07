@@ -1,6 +1,7 @@
-<%= form_with(model: @article, local: true) do |f| %>
+
+<%= form_with(model: @article, local: true, class: "form") do |f| %>
   <% if @article.errors.any? %>
-    <h2><%= pluralize(@article.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+    <h4><%= pluralize(@article.errors.count, "error") %> prohibited this micropost from being saved:</h4>
 
     <ul>
       <% @article.errors.full_messages.each do |message| %>
@@ -9,17 +10,19 @@
     </ul>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= f.label :title, "Title" %>
-    <%= f.text_field :title %>
+    <br>
+    <%= f.text_field :title, class: "input", placeholder: "Your article's title" %>
   </div>
 
-  <div>
+  <div class="field">
     <%= f.label :image, "Image URL" %>
-    <%= f.text_field :image %>
+    <br>
+    <%= f.text_field :image, class: "input", placeholder: "Your article's image URL" %>
   </div>
 
-  <div>
+  <div class="field">
     <p>Existing categories:</p>
     <ul>
       <% @categories.each do |category| %>
@@ -30,17 +33,19 @@
     <p>You can use a category from here or add a new one</p>
   </div>
 
-  <div>
+  <div class="field">
     <%= f.label :category_list, "Categories" %>
-    <%= f.text_field :category_list, placeholder: 'Category1, Category2, ...' %>
+    <br>
+    <%= f.text_field :category_list, placeholder: "#{@categories[0].name}, #{@categories[1].name}, ...", class: "input" %>
   </div>
 
-  <div>
+  <div class="field">
     <%= f.label :text, "Content" %>
-    <%= f.text_area :text %>
+    <br>
+    <%= f.text_area :text, class: "text-area", rows: "20", placeholder: "Start writing..." %>
   </div>
 
-  <div>
+  <div class="field">
     <%= f.submit "Submit", disable_with: 'Submiting...' %>    
   </div>
 <% end %>
