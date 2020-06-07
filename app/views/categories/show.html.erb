@@ -1,68 +1,20 @@
 <section class="category-articles">
-  <div class="article-row">
-    <div class="article">
-      <%= image_tag("https://littlevisuals.co/images/canal.jpg", class: "image float-left") %>
-      <article class="article-body right">
-        <h2>Category</h2>
-        <h3>Article title</h3>
-        <p class="author">by &nbsp;<span class="name">Author Name</span></p>
-        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident unde quo cumque non amet in a quos beatae nemo recusandae sapiente nam</p>
-        <a href="#" class="vote"><i class="far fa-heart"></i> 20</a>
-      </article>
-    </div>
-    <div class="article">
-      <%= image_tag("https://littlevisuals.co/images/canal.jpg", class: "image float-left") %>
-      <article class="article-body right">
-        <h2>Category</h2>
-        <h3>Article title</h3>
-        <p class="author">by &nbsp;<span class="name">Author Name</span></p>
-        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident unde quo cumque non amet in a quos beatae nemo recusandae sapiente nam</p>
-        <a href="#" class="voted"><i class="fas fa-heart"></i> 20</a>
-      </article>
-    </div>
-  </div>
-  <div class="article-row">
-    <div class="article">
-      <%= image_tag("https://littlevisuals.co/images/canal.jpg", class: "image float-right") %>
-      <article class="article-body left">
-        <h2>Category</h2>
-        <h3>Article title</h3>
-        <p class="author">by &nbsp;<span class="name">Author Name</span></p>
-        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident unde quo cumque non amet in a quos beatae nemo recusandae sapiente nam</p>
-        <a href="#" class="vote"><i class="far fa-heart"></i> 20</a>
-      </article>
-    </div>
-    <div class="article">
-      <%= image_tag("https://littlevisuals.co/images/canal.jpg", class: "image float-right") %>
-      <article class="article-body left">
-        <h2>Category</h2>
-        <h3>Article title</h3>
-        <p class="author">by &nbsp;<span class="name">Author Name</span></p>
-        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident unde quo cumque non amet in a quos beatae nemo recusandae sapiente nam</p>
-        <a href="#" class="vote"><i class="far fa-heart"></i> 20</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-
-<h1><%= @category.name %></h1>
-
-<ul>
   <% (0...@category.articles.length).each do |i| %>
     <% if i % 2 == 0 %>
       <div class="article-row">
     <% end %>
-        <h4><%= @category.articles[i].title %></h4>
-        <%= image_tag(@category.articles[i].image, size: "200x150", alt: "#{@category.articles[i].title}") %>
-        <p><%= @category.articles[i].author.name %></p>
-        <p><%= truncate(@category.articles[i].text) %></p>
-        <%= display_vote_for(@category.articles[i]) %>
-        <hr>
-        <br>        
+        <div class="article">
+          <%= image_tag(@category.articles[i].image, size: "200x150", alt: "#{@category.articles[i].title}", class: "image") %>
+          <article class="article-body">
+            <h2><%= @category.name %></h2>
+            <h3><%= @category.articles[i].title %></h3>
+            <p class="author">by &nbsp;<span class="name"><%= @category.articles[i].author.name %></span></p>
+            <p class="text"><%= @category.articles[i].text %></p>
+            <%= display_vote_for(@category.articles[i]) %>
+          </article>
+        </div>       
     <% if i % 2 != 0 %>
       </div>
     <% end %>
   <% end %>
-</ul>
+</section>

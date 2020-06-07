@@ -21,9 +21,13 @@ module ApplicationHelper
   def display_vote_for(article)
     vote_count = article.votes.count
     unless already_voted?(article)
-      link_to("#{pluralize(vote_count, "vote")}", article_votes_path(article), method: :post)
+      link_to(article_votes_path(article), method: :post,  class: "vote") do
+        "<i class='far fa-heart'></i> #{vote_count}".html_safe
+      end
     else
-      content_tag(:p, "#{pluralize(vote_count, "vote")}")
+      content_tag(:p, class: "voted") do
+        "<i class='fas fa-heart'></i> #{vote_count}".html_safe
+      end
     end
   end
 

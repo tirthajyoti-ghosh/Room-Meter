@@ -33,8 +33,11 @@
       </nav>
     </header>
 
-    <main>
-      <p id="notice"><%= notice %></p>
+    <main>      
+      <% if notice.present? %>
+        <p id="notice"> <%= notice %></p>
+      <% end %>
+      
       <%= yield %>
     </main>
     

@@ -34,6 +34,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+body #notice {
+  text-align: center;
+  background-color: #FA6000;
+  color: #ffffff;
+  padding: 10px;
+}
+
 body .header {
   display: flex;
   background-color: white;
@@ -393,6 +400,11 @@ main .category-articles {
 
 .category-articles .article-row {
   display: flex;
+  width: 100%;
+}
+
+.article-row .article {
+  width: 50%;
 }
 
 .article-row .image {
