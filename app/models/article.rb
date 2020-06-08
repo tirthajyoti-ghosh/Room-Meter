@@ -5,9 +5,11 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
-  validates :title, presence: true, length: {maximum: 50}
-  validates :text, presence: true, length: {maximum: 10000}
-  validates :image, presence: true
+  validates_presence_of :title
+  validates_presence_of :text
+  validates_presence_of :image
+  validates_length_of :title, minimum: 5, maximum: 50
+  validates_length_of :text, minimum: 20, maximum: 35000
 
   default_scope -> { order(created_at: :desc) }
 
