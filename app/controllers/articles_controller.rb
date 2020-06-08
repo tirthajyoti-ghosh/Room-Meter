@@ -9,10 +9,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      flash[:success] = "Article successfully created"
+      flash[:notice] = "Article successfully created"
       redirect_to root_path
     else
-      flash.now[:error] = "Something went wrong"
+      flash.now[:notice] = "Something went wrong. Try again."
       render 'new'
     end
   end  

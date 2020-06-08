@@ -121,8 +121,6 @@ main .gradient {
   background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
 }
 
-
-
 body .footer {
   display :flex;
   justify-content: space-between;
