@@ -12,50 +12,53 @@
   </head>
 
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="<%= root_path %>" class="logo">liFEsTlYe</a>
-
-        <ul class="nav-list">
-          <li><%= menu_link_to 'home', root_path %></li>
-          <li><%= menu_link_to 'write new article', new_article_path %></li>
-        </ul>
-
-        <ul class="nav-list account">
-          <% if user_signed_in? %>
-            <li class="nav-link name"><%= current_user.name %></li>
-            <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "login", new_user_session_path, class: "nav-link name" %></li>
-            <li><%= link_to "register", new_user_registration_path, class: "nav-link" %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </header>
-
-    <main>      
+    <% unless user_signed_in? %>
       <% if notice.present? %>
         <p id="notice"> <%= notice %></p>
       <% end %>
       
       <%= yield %>
-    </main>
-    
-    <footer class="footer">
-      <a href="/" class="logo">liFEsTlYe</a>
+    <% else %>
+      <header class="header">
+        <nav class="navbar">
+          <a href="<%= root_path %>" class="logo">liFEsTlYe</a>
 
-      <ul class="footer-links">
-        <li><a href="/" class="active">Privacy Policy</a></li>
-        <li><a href="/" class="active">Terms &amp; Conditions</a></li>
-        <li>Copyright 2020. All rights reserved</li>
-      </ul>
+          <ul class="nav-list">
+            <li><%= menu_link_to 'home', root_path %></li>
+            <li><%= menu_link_to 'write new article', new_article_path %></li>
+          </ul>
 
-      <ul class="footer-links social-links">
-        <li>Connect with us:</li>
-        <li><a href="/" class="icon twitter"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="/" class="icon instagram"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="/" class="icon facebook"><i class="fab fa-facebook-f"></i></a></li>
-      </ul>
-    </footer>
+          <ul class="nav-list account">
+              <li class="nav-link name"><%= current_user.name %></li>
+              <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <% if notice.present? %>
+          <p id="notice"> <%= notice %></p>
+        <% end %>
+        
+        <%= yield %>
+      </main>
+      
+      <footer class="footer">
+        <a href="/" class="logo">liFEsTlYe</a>
+
+        <ul class="footer-links">
+          <li><a href="/" class="active">Privacy Policy</a></li>
+          <li><a href="/" class="active">Terms &amp; Conditions</a></li>
+          <li>Copyright 2020. All rights reserved</li>
+        </ul>
+
+        <ul class="footer-links social-links">
+          <li>Connect with us:</li>
+          <li><a href="/" class="icon twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="/" class="icon instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="/" class="icon facebook"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+      </footer>
+    <% end %>
   </body>
 </html>
