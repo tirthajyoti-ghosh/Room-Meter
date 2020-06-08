@@ -3,6 +3,7 @@ body .devise-form {
   width: 100%;
   height: 100vh;
   background-color: #F3F3F3;
+  overflow-y: hidden;
 }
 
 .devise-form .form-section {
@@ -76,4 +77,81 @@ form .checkbox {
 
 .devise-form .images {
   width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images .col {
+  width: 18%;
+  margin-left: 12px;
+}
+
+.images .col:first-child {
+  margin-left: 38px;
+}
+
+.images .image {
+  width: 100%;
+  margin-bottom: 11px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.images .image-1 {
+  height: 48%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-2 {
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-3 {
+  height: 24%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-4 {
+  height: 48%;
+}
+
+.images .image-5 {
+  height: 24%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-6 {
+  height: 48%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-7 {
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-8 {
+  height: 24%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-9 {
+  height: 74%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-10 {
+  height: 48%;
+  border-radius: 0 0 0 10px;
+}
+
+.images .image-11 {
+  height: 50%;
+  border-radius: 10px 0 0 0;
+  margin-bottom: 0;
 }
