@@ -1,3 +1,102 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+main .categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories .category {
+  height: 230px;
+  width: 25%;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.category .title {
+  font-size: 16px;
+  border-bottom: solid #FEFE00 2px;
+  display: inline;
+}
+
+.category .article-title {
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+}
+
+main .category-articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-articles .article-row {
+  display: flex;
+  width: 100%;
+}
+
+.article-row .article {
+  width: 50%;
+}
+
+.article-row .image {
+  width: 50%;
+  height: 100%;
+  float: left;
+  object-fit: cover;
+}
+
+.article-row:nth-child(even) .image {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.article-row .article-body {
+  width: 48%;
+  height: 275px;
+  margin: 10px 15px 10px 52%;
+}
+
+.article-row:nth-child(even) .article-body {
+  margin: 10px 52% 10px 15px;
+}
+
+.article-body h2 {
+  color: #F99B00;
+  font-size: 17px;
+  letter-spacing: 1px;
+  border-bottom: solid #F99B00 2px;
+  display: inline-block;
+  margin: 10px 0 15px 0;
+  padding: 0 3px;
+}
+
+.article-body h3 {
+  color: #4E443E;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding: 0 3px;
+}
+
+.article-body .author {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.author .name {
+  font-size: 15px;
+  color: #847F7A;
+  font-style: normal;
+}
+
+.article-body .text {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  margin-bottom: 20px;
+}

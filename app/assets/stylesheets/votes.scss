@@ -1,3 +1,15 @@
 // Place all the styles related to the votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.article-body .vote {
+  color: #847F7B;
+}
+
+.article-body .vote:hover {
+  color: #F99B00;
+}
+
+.article-body .voted {
+  color: #F99B00;
+}
