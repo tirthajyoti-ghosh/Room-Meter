@@ -107,6 +107,10 @@ body .logo::after {
   color: #535353;
 }
 
+body main {
+  min-height: 80.7vh;
+}
+
 main .gradient {
   position: absolute;
   top: 0;

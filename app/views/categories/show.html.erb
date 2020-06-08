@@ -13,7 +13,7 @@
             <%= display_vote_for(@category.articles[i]) %>
           </article>
         </div>       
-    <% if i % 2 != 0 %>
+    <% if i % 2 != 0 || @category.articles.length == 1 %>
       </div>
     <% end %>
   <% end %>
