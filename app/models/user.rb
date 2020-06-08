@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true, length: {maximum: 20}
+  validates_presence_of :name
+  validates_length_of :name, minimum: 2, maximum: 30, on: :create
 
   has_many :articles, foreign_key: "author_id", dependent: :destroy
   has_many :votes, dependent: :destroy
