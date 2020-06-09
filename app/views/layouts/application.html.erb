@@ -24,8 +24,8 @@
           <a href="<%= root_path %>" class="logo">liFEsTlYe</a>
 
           <ul class="nav-list">
-            <li><%= menu_link_to 'home', root_path %></li>
-            <li><%= menu_link_to 'write new article', new_article_path %></li>
+            <li><%= link_to 'home', root_path, class: "nav-link #{yield(:index)}" %></li>
+            <li><%= link_to 'write new article', new_article_path, class: "nav-link #{yield(:new)}" %></li>
           </ul>
 
           <ul class="nav-list account">
