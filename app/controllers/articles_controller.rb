@@ -1,5 +1,10 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! 
+
+  def index
+    @articles = Article.includes(:author).all
+    @categories = Category.all
+  end
 
   def new
     @article = current_user.articles.build
@@ -16,12 +21,7 @@ class ArticlesController < ApplicationController
       @categories = Category.all
       render 'new'
     end
-  end  
-
-  def index
-    @articles = Article.includes(:author).all
-    @categories = Category.all
-  end
+  end 
 
   private
 
