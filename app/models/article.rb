@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   validates_presence_of :text
   validates_presence_of :image
   validates_length_of :title, minimum: 5, maximum: 50
-  validates_length_of :text, minimum: 20, maximum: 35000
+  validates_length_of :text, minimum: 10, maximum: 35000
 
   default_scope -> { order(created_at: :desc) }
 
