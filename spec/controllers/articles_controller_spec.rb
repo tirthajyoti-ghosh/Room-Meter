@@ -1,11 +1,11 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-RSpec.describe "articles#index", type: :feature do
+RSpec.describe ArticlesController, type: :feature do
   context "articles controller actions" do
     let(:user) { User.create!(name: "Example User01", email: "example-1@user.com", password: "password", password_confirmation: "password") }
     
-    let(:category) { Category.create!(name: 'Anything', priority: 5) } 
+    let(:category) { Category.create!(name: 'Anything', priority: 5) }
     
     let(:article1) { user.articles.create!(title: "Example Title01", text: "Example text01", image: "https://example.com", category_list: "Anything") }
 
