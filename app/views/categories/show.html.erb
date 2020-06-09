@@ -10,7 +10,7 @@
             <h3><%= @category.articles[i].title %></h3>
             <p class="author">by &nbsp;<span class="name"><%= @category.articles[i].author.name %></span></p>
             <p class="text"><%= @category.articles[i].text %></p>
-            <%= display_vote_for(@category.articles[i]) %>
+            <%= display_vote_for(@category.articles[i], current_user.id) %>
           </article>
         </div>       
     <% if i % 2 != 0 || @category.articles.length == 1 %>
