@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = current_user.articles.build
-    @categories = Category.order(priority: :desc)
+    @categories = Category.all
   end
 
   def create
@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     else
       flash.now[:notice] = "Something went wrong. Try again."
+      @categories = Category.all
       render 'new'
     end
   end  

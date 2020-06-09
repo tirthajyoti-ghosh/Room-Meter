@@ -16,6 +16,18 @@ RSpec.describe Article, type: :model do
     it { should validate_presence_of(:image) }
     it { should validate_length_of(:title).is_at_least(5).is_at_most(50) }
     it { should validate_length_of(:text).is_at_least(10).is_at_most(35000) }
+
+    let(:article) { user.articles.build(title: "Example Title01", text: "Example text01", category_list: "category1, category2") }
+
+    it "is expected to return false when invalid URL provided for image field" do
+      article.image = "invalid url"
+      expect(article.valid?).to eq(false)
+    end
+
+    it "is expected to return true when valid URL provided for image field" do
+      article.image = "https://example.com"
+      expect(article.valid?).to eq(true)
+    end
   end
 
   describe "default scope" do

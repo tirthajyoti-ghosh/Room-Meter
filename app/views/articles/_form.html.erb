@@ -1,7 +1,7 @@
 
 <%= form_with(model: @article, local: true, class: "form") do |f| %>
   <% if @article.errors.any? %>
-    <h4><%= pluralize(@article.errors.count, "error") %> prohibited this micropost from being saved:</h4>
+    <h4><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h4>
 
     <ul>
       <% @article.errors.full_messages.each do |message| %>
