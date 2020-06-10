@@ -42,7 +42,61 @@ body #notice {
   text-align: center;
   background-color: #FA6000;
   color: #ffffff;
-  padding: 10px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+form .alert {
+  background: #FAE6E6;
+  position: relative;
+  padding: .5em 1em 0 2em;
+  margin: 0 0 0 0;
+  box-shadow: inset 6px 0 #CC0000;
+}
+
+.alert .danger {
+  position: relative;
+  top: 5px;
+  left: -5px;
+}
+
+.alert h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: .5em;
+  width: 80%;
+  top: -40px;
+  left: 70px;
+}
+
+.alert .alert-text {
+  margin-bottom: .5em;
+  position: relative;
+  top: -32px;
+  left: 70px;
+  width: 80%;
+}
+
+.alert .signup {
+  margin-bottom: .5em;
+  position: relative;
+  top: -32px;
+  left: 70px;
+  font-size: 14px;
+}
+
+.alert .alert-text::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #CC0000;
+  margin-bottom: 3px;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 body .header {
@@ -57,22 +111,11 @@ body .header {
   width: 100%;
 }
 
-body .logo {
-  color: #4E443E;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 2px;
-
+.logo img {
+  width: 65px;
+  margin: -35px 10px;
 }
 
-body .logo::after {
-  content: '';
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: #FA6000;
-}
 
 .navbar .nav-list {
   display: flex;
@@ -88,6 +131,7 @@ body .logo::after {
 .navbar .account {
   width: 10%;
   color: #847F7A;
+  align-items: center;
 }
 
 .nav-list .nav-link {
@@ -98,9 +142,8 @@ body .logo::after {
   color: #FA6000;
 }
 
-.account .name {
-  border-right: solid #847F7B 2px;
-  padding-right: 10px;
+.account .bar {
+  font-size: 15px;
 }
 
 .account .logout:hover {
@@ -129,8 +172,8 @@ body .footer {
   background-color: #4E443E;
 }
 
-.footer .logo {
-  color: #fff;
+.footer-logo img {
+  margin: -27px 10px;
 }
 
 .footer .footer-links {

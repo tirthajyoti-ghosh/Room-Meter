@@ -107,7 +107,7 @@ main .category-articles::before {
   fill: #fff;
 }
 
-
+// New article form 
 
 .article-form .form {
   margin: 25px 30% 80px;
@@ -118,6 +118,10 @@ main .category-articles::before {
   padding-top: 20px;
   text-align: center;
   color: #4E443E;
+}
+
+.alert .alert-text {
+  top: -20px;
 }
 
 .form .field {

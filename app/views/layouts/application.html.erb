@@ -21,7 +21,7 @@
     <% else %>
       <header class="header">
         <nav class="navbar">
-          <a href="<%= root_path %>" class="logo">liFEsTlYe</a>
+          <a href="<%= root_path %>" class="logo"><%= image_tag("logo.png") %></a>
 
           <ul class="nav-list">
             <li><%= link_to 'home', root_path, class: "nav-link #{yield(:index)}" %></li>
@@ -29,8 +29,9 @@
           </ul>
 
           <ul class="nav-list account">
-              <li class="nav-link name"><%= current_user.name %></li>
-              <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li class="nav-link name"><%= current_user.name %></li>
+            <li class="bar">|</li>
+            <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
         </nav>
       </header>
@@ -44,7 +45,7 @@
       </main>
       
       <footer class="footer">
-        <a href="/" class="logo">liFEsTlYe</a>
+        <a href="<%= root_path %>" class="logo footer-logo"><%= image_tag("logo.png") %></a>
 
         <ul class="footer-links">
           <li><a href="/" class="active">Privacy Policy</a></li>

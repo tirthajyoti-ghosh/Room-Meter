@@ -1,9 +1,23 @@
 <section class="devise-form">
   <div class="form-section">
+    <%= image_tag("logo.png", class: "login-signup-logo") %>
+
     <h1>Let's start...</h1>
     <small>... your adventure</small>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <% if resource.errors.any? %>
+        <div class="alert">
+          <svg class="danger" width="50" height="50" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#CC0000" d="M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z"></path></svg>
+          <h4><%= I18n.t("errors.messages.not_saved",
+                 count: resource.errors.count,
+                 resource: resource.class.model_name.human.downcase)
+          %></h4>
+
+          <% resource.errors.full_messages.each do |message| %>
+            <div class="alert-text signup"><%= message %></div>
+          <% end %>
+        </div>
+      <% end %>
 
       <div class="devise-field">
         <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name",class: "input", required: true %>
