@@ -1,6 +1,6 @@
 5.times do
   Category.create(
-    name: Faker::Science.element, 
+    name: Faker::Lorem.sentence(word_count: 3), 
     priority: rand(1..5))
 end
 
@@ -15,9 +15,9 @@ end
   user = User.find(n+1)
 
   user.articles.create!(
-    title: Faker::Company.industry, 
+    title: Faker::Lorem.sentence(word_count: 5), 
     text: Faker::Lorem.paragraph, 
-    image: Faker::LoremFlickr.image(size: "400x300"), 
+    image: "https://source.unsplash.com/random", 
     category_list: Category.pluck(:name).sample)
 end
 
