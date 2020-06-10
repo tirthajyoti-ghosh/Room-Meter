@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user! 
+  before_action :authenticate_user!
 
   def index
     @articles = Article.includes(:author).all
@@ -14,14 +14,14 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      flash[:notice] = "Article successfully created"
+      flash[:notice] = 'Article successfully created'
       redirect_to root_path
     else
-      flash.now[:notice] = "Something went wrong. Try again."
+      flash.now[:notice] = 'Something went wrong. Try again.'
       @categories = Category.all
       render 'new'
     end
-  end 
+  end
 
   private
 

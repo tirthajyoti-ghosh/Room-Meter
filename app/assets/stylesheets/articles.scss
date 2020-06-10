@@ -13,7 +13,7 @@
   height: 15px;
 }
 
-.featured-articles .article-big {  
+.featured-articles .article-big {
   width: 75%;
   float: left;
   color: #fff;
@@ -23,18 +23,18 @@
 
 .featured-articles .article-big::before,
 main .article-form::before,
-main .category-articles::before {  
+main .category-articles::before {
   content: '';
   display: block;
   position: absolute;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, rgba(232,7,47,1) 25%, rgba(132,127,123,1) 25%);
+  background: linear-gradient(90deg, rgba(232, 7, 47, 1) 25%, rgba(132, 127, 123, 1) 25%);
 }
 
 main .article-form::before,
 main .category-articles::before {
-  background: linear-gradient(90deg, rgba(232,7,47,1) 18.5%, rgba(132,127,123,1) 18.5%);
+  background: linear-gradient(90deg, rgba(232, 7, 47, 1) 18.5%, rgba(132, 127, 123, 1) 18.5%);
 }
 
 .article-big #logo {
@@ -68,7 +68,7 @@ main .category-articles::before {
 
 .content h1 {
   font-size: 20px;
-  color: #FA6000;
+  color: #fa6000;
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -77,7 +77,7 @@ main .category-articles::before {
 .content .text,
 .content .time {
   position: relative;
-  color: #ffffff;
+  color: #fff;
   font-size: 15px;
 }
 
@@ -107,7 +107,7 @@ main .category-articles::before {
   fill: #fff;
 }
 
-// New article form 
+// New article form
 
 .article-form .form {
   margin: 25px 30% 80px;
@@ -117,7 +117,7 @@ main .category-articles::before {
   margin: 0 30% 20px;
   padding-top: 20px;
   text-align: center;
-  color: #4E443E;
+  color: #4e443e;
 }
 
 .alert .alert-text {
@@ -134,7 +134,7 @@ main .category-articles::before {
   text-transform: uppercase;
   line-height: 30px;
   letter-spacing: 2px;
-  color: #FA6000;
+  color: #fa6000;
 }
 
 .field .input {
@@ -144,17 +144,16 @@ main .category-articles::before {
   font-size: 15px;
   letter-spacing: 1px;
   border-radius: 5px;
-  border: solid 1px #847F7A;
+  border: solid 1px #847f7a;
 }
 
 .field .text-area {
   width: 100%;
   padding: 15px;
   font-size: 17px;
-  font-size: 17px;
   letter-spacing: 1px;
   border-radius: 5px;
-  border: solid 1px #847F7A;
+  border: solid 1px #847f7a;
 }
 
 .field .submit-btn {
@@ -163,24 +162,24 @@ main .category-articles::before {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
-  border: solid #FA6000 2px;
+  border: solid #fa6000 2px;
   border-radius: 5px;
   background-color: #fff;
-  color: #4E443E;
+  color: #4e443e;
   cursor: pointer;
 }
 
 .field .submit-btn:hover {
-  background-color: #FA6000;
+  background-color: #fa6000;
   color: #fff;
 }
 
 .field .submit-btn:focus {
-  border-color: #FA6000;
+  border-color: #fa6000;
 }
 
 .field .submit-btn:active {
-  border-color: #FA6000;
+  border-color: #fa6000;
 }
 
 .form .category-list {
@@ -193,19 +192,19 @@ main .category-articles::before {
   margin-top: 15px;
   font-style: italic;
   font-size: 15px;
-  color: #4E443E;
+  color: #4e443e;
 }
 
 .category-list .category {
   padding: 5px 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  border: solid #FA6000 1px;
+  border: solid #fa6000 1px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .category-list .category:hover {
-  background-color:#FA6000;
+  background-color: #fa6000;
   color: #fff;
 }

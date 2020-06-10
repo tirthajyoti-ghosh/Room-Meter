@@ -40,18 +40,18 @@ body {
 
 body #notice {
   text-align: center;
-  background-color: #FA6000;
-  color: #ffffff;
+  background-color: #fa6000;
+  color: #fff;
   padding: 5px;
   font-size: 15px;
 }
 
 form .alert {
-  background: #FAE6E6;
+  background: #fae6e6;
   position: relative;
-  padding: .5em 1em 0 2em;
+  padding: 0.5em 1em 0 2em;
   margin: 0 0 0 0;
-  box-shadow: inset 6px 0 #CC0000;
+  box-shadow: inset 6px 0 #c00;
 }
 
 .alert .danger {
@@ -66,14 +66,14 @@ form .alert {
   color: black;
   position: relative;
   letter-spacing: 1px;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   width: 80%;
   top: -40px;
   left: 70px;
 }
 
 .alert .alert-text {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   position: relative;
   top: -32px;
   left: 70px;
@@ -81,7 +81,7 @@ form .alert {
 }
 
 .alert .signup {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   position: relative;
   top: -32px;
   left: 70px;
@@ -93,7 +93,7 @@ form .alert {
   display: inline-block;
   width: 5px;
   height: 5px;
-  background-color: #CC0000;
+  background-color: #c00;
   margin-bottom: 3px;
   margin-right: 5px;
   border-radius: 50%;
@@ -116,7 +116,6 @@ body .header {
   margin: -35px 10px;
 }
 
-
 .navbar .nav-list {
   display: flex;
   justify-content: space-between;
@@ -130,16 +129,16 @@ body .header {
 
 .navbar .account {
   width: 10%;
-  color: #847F7A;
+  color: #847f7a;
   align-items: center;
 }
 
 .nav-list .nav-link {
-  color: #847F7B;
+  color: #847f7b;
 }
 
 .nav-list .active {
-  color: #FA6000;
+  color: #fa6000;
 }
 
 .account .bar {
@@ -161,15 +160,15 @@ main .gradient {
   bottom: 0;
   left: 0;
   opacity: 0.85;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 body .footer {
-  display :flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 15px;
-  background-color: #4E443E;
+  background-color: #4e443e;
 }
 
 .footer-logo img {
@@ -192,7 +191,7 @@ body .footer {
 }
 
 .footer-links .active {
-  color: #FA6000;
+  color: #fa6000;
 }
 
 .social-links .icon {
@@ -200,10 +199,10 @@ body .footer {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background-color: #FA6000;
+  background-color: #fa6000;
   padding: 8px 11px;
   font-size: 17px;
-  color: #4E443E;
+  color: #4e443e;
 }
 
 .social-links .icon.twitter {

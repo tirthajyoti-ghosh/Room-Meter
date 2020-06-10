@@ -1,14 +1,15 @@
 require 'rails_helper'
 require 'capybara/rspec'
+# rubocop:disable  Layout/LineLength
 
 RSpec.describe CategoriesController, type: :feature do
-  context "categories controller actions" do
-    let(:user) { User.create!(name: "Example User01", email: "example-1@user.com", password: "password", password_confirmation: "password") }
+  context 'categories controller actions' do
+    let(:user) { User.create!(name: 'Example User01', email: 'example-1@user.com', password: 'password', password_confirmation: 'password') }
 
-    before(:each) do      
+    before(:each) do
       @category = Category.create!(name: 'Anything', priority: 5)
 
-      @article = user.articles.create!(title: "Example Title01", text: "Example text01", image: "https://example.com", category_list: @category.name)
+      @article = user.articles.create!(title: 'Example Title01', text: 'Example text01', image: 'https://example.com', category_list: @category.name)
 
       visit category_path(@category)
       fill_in 'user_email', with: user.email
@@ -16,11 +17,11 @@ RSpec.describe CategoriesController, type: :feature do
       click_button 'Login'
     end
 
-    scenario "category show page has the category name" do
+    scenario 'category show page has the category name' do
       expect(page).to have_text(@category.name)
     end
 
-    scenario "category show page has the article title" do
+    scenario 'category show page has the article title' do
       expect(page).to have_text(@article.title)
     end
 
@@ -36,7 +37,8 @@ RSpec.describe CategoriesController, type: :feature do
 
     scenario "category show page has the class 'vote' and it contains number of votes" do
       expect(page).to have_selector('.article-body .vote')
-      expect(page.find('.article-body .vote').text).to eq("0")
+      expect(page.find('.article-body .vote').text).to eq('0')
     end
   end
 end
+# rubocop:enable  Layout/LineLength

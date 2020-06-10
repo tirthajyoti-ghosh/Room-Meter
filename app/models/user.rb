@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates_presence_of :name
   validates_length_of :name, minimum: 2, maximum: 30
 
-  has_many :articles, foreign_key: "author_id", dependent: :destroy
+  has_many :articles, foreign_key: 'author_id', dependent: :destroy
   has_many :votes, dependent: :destroy
 end
