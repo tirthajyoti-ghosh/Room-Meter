@@ -5,7 +5,6 @@ AllCops:
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
-    - "README.md"
     - "node_modules/**/*"
 
   DisplayCopNames: true
@@ -58,5 +57,3 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Layout/EndOfLine:
-  EnforcedStyle: crlf
