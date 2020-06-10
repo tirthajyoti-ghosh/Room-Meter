@@ -49,11 +49,11 @@ Its a hotel review articles site similar to any blog site.
 
 ## Live Demo
 
-[Live Demo Link](https://murmuring-crag-15929.herokuapp.com/)
+[Live Demo Link](https://gentle-bastion-08051.herokuapp.com/)
 
 ## Video Presentation
 
-[Video Presentation](https://www.loom.com/share/1b1522f11ff64b1d9da92c4ec73b3c38)
+[Video Presentation](https://www.loom.com/share/99f9ba3cfd0b45cba24ee2519def6462)
 
 ## Getting Started
 
