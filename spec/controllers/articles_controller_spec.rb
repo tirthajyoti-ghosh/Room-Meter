@@ -59,10 +59,10 @@ RSpec.describe ArticlesController, type: :feature do
       end
 
       scenario 'create article page creates an article' do
-        fill_in 'article_title',	with: 'Test title'
-        fill_in 'article_image',	with: 'https://example.com'
-        fill_in 'article_category_list',	with: 'Anything'
-        fill_in 'article_text',	with: 'Test article text'
+        fill_in 'article_title', with: 'Test title'
+        fill_in 'article_image', with: 'https://example.com'
+        fill_in 'article_category_list', with: 'Anything'
+        fill_in 'article_text', with: 'Test article text'
 
         click_button 'Submit'
 
