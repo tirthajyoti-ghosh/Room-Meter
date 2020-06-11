@@ -20,20 +20,6 @@ class Article < ApplicationRecord
     self.categories = new_or_found_categories
   end
 
-  def self.max_voted
-    return unless Vote.any?
-
-    vote_hash = Vote.group(:article_id).count
-    max_value = vote_hash.values.max
-    max_vote_article_id = vote_hash.key(max_value)
-
-    Article.find(max_vote_article_id)
-  end
-
-  def self.vote_count_of(article)
-    Vote.where(article_id: article.id).count
-  end
-
   def self.already_voted?(article, user_id)
     Vote.exists?(user_id: user_id, article_id: article.id)
   end

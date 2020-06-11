@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:author).all
-    @max_voted_article = Article.max_voted
+    @max_voted_article = Article.select("articles.*").where(votes_count: Article.maximum(:votes_count)).first
     @categories = Category.includes(%i[articles categorizations]).all
   end
 
