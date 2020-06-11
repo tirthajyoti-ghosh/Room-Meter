@@ -29,7 +29,7 @@
           </ul>
 
           <ul class="nav-list account">
-            <li class="nav-link name"><%= current_user.name %></li>
+            <li class="nav-link name"><%= current_user.name.split(" ").first %></li>
             <li class="bar">|</li>
             <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
