@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:author).all
-    @categories = Category.all
+    @categories = Category.includes(%i[articles categorizations]).all
   end
 
   def new
