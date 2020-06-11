@@ -59,5 +59,3 @@ Style/HashTransformValues:
   Enabled: false
 Style/EndOfLine:
   EnforcedStyle: lf
-# Layout/EndOfLine:
-#   EnforcedStyle: lf
