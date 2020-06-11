@@ -137,6 +137,8 @@ Give a ⭐️ if you like this project!
 - Stackoverflow
 - Freepik
 - Unsplash
+- Site Design [Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+- Login/Signup page design [Codepen](https://codepen.io/FilipVitas/full/xxbBqYN)
 
 ## 📝 License
 
