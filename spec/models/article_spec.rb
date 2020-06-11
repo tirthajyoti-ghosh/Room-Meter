@@ -41,7 +41,7 @@ RSpec.describe Article, type: :model do
     end
   end
 
-  describe '.category_list=(category_string)' do
+  describe '#category_list=(category_string)' do
     let(:article) { user.articles.build(title: 'Example Title01', text: 'Example text01', image: 'https://example.com') }
 
     it 'should set the categories of the article' do
@@ -49,6 +49,22 @@ RSpec.describe Article, type: :model do
       article.save
 
       expect(article.categories.pluck(:name)).to eq(%w[Category1 Category2])
+    end
+  end
+
+  describe '.already_voted?' do
+    let(:article) { user.articles.create!(title: 'Example Title01', text: 'Example text01', image: 'https://example.com', category_list: 'category1, category2') }
+
+    it 'returns true if given user already voted given article' do
+      Vote.create!(user_id: user.id, article_id: article.id)
+
+      expect(Article.already_voted?(article, user.id)).to eq(true)
+    end
+
+    it 'returns false if given user did not vote the given article' do
+      user2 = User.create!(name: 'Example User02', email: 'example-2@user.com', password: 'password', password_confirmation: 'password')
+
+      expect(Article.already_voted?(article, user2.id)).to eq(false)
     end
   end
 end
