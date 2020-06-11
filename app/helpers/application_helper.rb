@@ -3,13 +3,13 @@ module ApplicationHelper
     article = Article.max_voted
 
     html = <<~MLS
-    <article class="article-big" style="background: url('#{article.image}'); background-size: cover;">
-      <a href="/" class="gradient"></a>
-      <div class="content">
-        <h1>#{article.title}</h1>
-        <span class="text">#{article.text}</span>
-      </div>
-    </article>
+      <article class="article-big" style="background: url('#{article.image}'); background-size: cover;">
+        <a href="/" class="gradient"></a>
+        <div class="content">
+          <h1>#{article.title}</h1>
+          <span class="text">#{article.text}</span>
+        </div>
+      </article>
     MLS
 
     html.html_safe
@@ -28,5 +28,5 @@ module ApplicationHelper
         "<i class='far fa-heart'></i> #{vote_count}".html_safe
       end
     end
-  end  
+  end
 end
