@@ -1,21 +1,25 @@
 module ApplicationHelper
-  def vote_count(article_id)
-    Vote.where(article_id: article_id).count
-  end
-
   def max_voted_article
-    return unless Vote.any?
+    article = Article.max_voted
 
-    vote_hash = Vote.group(:article_id).count
-    max_value = vote_hash.values.max
-    max_vote_article_id = vote_hash.key(max_value)
+    html = <<~MLS
+    <article class="article-big" style="background: url('#{article.image}'); background-size: cover;">
+      <a href="/" class="gradient"></a>
+      <div class="content">
+        <h1>#{article.title}</h1>
+        <span class="text">#{article.text}</span>
+      </div>
+    </article>
+    MLS
 
-    Article.find(max_vote_article_id)
+    html.html_safe
   end
 
   def display_vote_for(article, user_id)
-    vote_count = article.votes.count
-    if already_voted?(article, user_id)
+    vote_count = Article.vote_count_of(article)
+    vote_status = Article.already_voted?(article, user_id)
+
+    if vote_status
       content_tag(:p, class: 'voted') do
         "<i class='fas fa-heart'></i> #{vote_count}".html_safe
       end
@@ -24,9 +28,5 @@ module ApplicationHelper
         "<i class='far fa-heart'></i> #{vote_count}".html_safe
       end
     end
-  end
-
-  def already_voted?(article, user_id)
-    Vote.exists?(user_id: user_id, article_id: article.id)
-  end
+  end  
 end
