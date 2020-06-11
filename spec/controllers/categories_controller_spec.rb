@@ -35,9 +35,8 @@ RSpec.describe CategoriesController, type: :feature do
       expect(page.find('.article-body .text').text).to eq(@article.text)
     end
 
-    scenario "category show page has the class 'vote' and it contains number of votes" do
+    scenario "category show page has the class 'vote'" do
       expect(page).to have_selector('.article-body .vote')
-      expect(page.find('.article-body .vote').text).to eq('0')
     end
   end
 end

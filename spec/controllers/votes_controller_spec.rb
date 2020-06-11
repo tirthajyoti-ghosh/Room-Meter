@@ -18,13 +18,13 @@ RSpec.describe VotesController, type: :feature do
     end
 
     scenario "one vote is created when user clicks link with class 'vote'" do
-      click_link '0'
+      page.find('.article-body .vote').click
 
       expect(@article.votes.count).to eq(1)
     end
 
     scenario 'vote link changes to p element when clicked(vote casted)' do
-      click_link '0'
+      page.find('.article-body .vote').click
 
       expect(page).to have_selector('.article-body p.voted')
       expect(page.find('.article-body p.voted').text).to eq('1')

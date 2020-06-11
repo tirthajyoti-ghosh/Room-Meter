@@ -28,7 +28,7 @@ RSpec.describe ArticlesController, type: :feature do
 
     context 'articles#index' do
       scenario "index page shows current user's name" do
-        expect(page).to have_text('Example User')
+        expect(page).to have_text('Example')
       end
 
       scenario 'index page shows max voted article' do
