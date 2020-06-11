@@ -1,7 +1,13 @@
 <% provide(:index, "active") %>
 
 <section class="featured-articles">
-  <%= max_voted_article %>
+  <article class="article-big" style="background: url('<%= @max_voted_article.image %>'); background-size: cover;">
+    <a href="/" class="gradient"></a>	
+    <div class="content">	
+      <h1><%= @max_voted_article.title %></h1>	
+      <span class="text"><%= @max_voted_article.text %></span>	
+    </div>	
+  </article>
 
   <div class="article-aside weather">
     <a href="/" class="gradient"></a>

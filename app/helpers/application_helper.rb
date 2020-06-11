@@ -1,20 +1,4 @@
 module ApplicationHelper
-  def max_voted_article
-    article = Article.max_voted
-
-    html = <<~MLS
-      <article class="article-big" style="background: url('#{article.image}'); background-size: cover;">
-        <a href="/" class="gradient"></a>
-        <div class="content">
-          <h1>#{article.title}</h1>
-          <span class="text">#{article.text}</span>
-        </div>
-      </article>
-    MLS
-
-    html.html_safe
-  end
-
   def display_vote_for(article, user_id)
     vote_count = Article.vote_count_of(article)
     vote_status = Article.already_voted?(article, user_id)
