@@ -11,26 +11,26 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe ArticlesHelper, type: :helper do
-  describe "article_row_decider" do
-    it "returns div.article-row and div end tag for the first div.article when there is only one article" do
-      expect(article_row_decider("top", 0, 1)).to eq("<div class='article-row'>")
-      expect(article_row_decider("bottom", 0, 1)).to eq("</div>")
+  describe 'article_row_decider' do
+    it 'returns div.article-row and div end tag for the first div.article when there is only one article' do
+      expect(article_row_decider('top', 0, 1)).to eq("<div class='article-row'>")
+      expect(article_row_decider('bottom', 0, 1)).to eq('</div>')
     end
-    
-    it "returns empty string for the second div.article when there are two articles" do
-      expect(article_row_decider("top", 1, 2)).to eq("")
+
+    it 'returns empty string for the second div.article when there are two articles' do
+      expect(article_row_decider('top', 1, 2)).to eq('')
     end
-    
-    it "returns end div tag for the second div.article when there are two articles" do
-      expect(article_row_decider("bottom", 1, 2)).to eq("</div>")
+
+    it 'returns end div tag for the second div.article when there are two articles' do
+      expect(article_row_decider('bottom', 1, 2)).to eq('</div>')
     end
-    
-    it "returns div.article-row when div.article position is even (0, 2, 4,...)" do
-      expect(article_row_decider("top", 2, 4)).to eq("<div class='article-row'>")
+
+    it 'returns div.article-row when div.article position is even (0, 2, 4,...)' do
+      expect(article_row_decider('top', 2, 4)).to eq("<div class='article-row'>")
     end
-    
-    it "returns end div tag when div.article position is odd (1, 3, 5,...)" do
-      expect(article_row_decider("bottom", 3, 4)).to eq("</div>")
+
+    it 'returns end div tag when div.article position is odd (1, 3, 5,...)' do
+      expect(article_row_decider('bottom', 3, 4)).to eq('</div>')
     end
   end
 end
