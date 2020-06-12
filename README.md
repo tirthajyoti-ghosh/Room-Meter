@@ -107,6 +107,13 @@ Open `http://localhost:3000/` in your browser.
 
 - App deployed in Heroku.
 
+### For future releases
+
+- Add comments section to articles
+- Create an article show page
+- Create a rating system
+- A search feature to search reviews
+
 ## Author
 
 👤 **Tirthajyoti Ghosh**
