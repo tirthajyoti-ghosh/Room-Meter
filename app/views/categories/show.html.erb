@@ -9,7 +9,7 @@
           <h2><%= @category.name %></h2>
           <h3><%= @category.articles[i].title %></h3>
           <p class="author">by &nbsp;<span class="name"><%= @category.articles[i].author.name %></span></p>
-          <p class="text"><%= @category.articles[i].text %></p>
+          <p class="text"><%= @category.articles[i].text.truncate(70) %></p>
           <%= display_vote_for(@category.articles[i], current_user.id) %>
         </article>
       </div>
