@@ -1,3 +1,16 @@
 <section class="category-articles">
-  <%= category_articles %>
+  <% (0...@category.articles.length).each do |i| %>
+    <%= article_row_decider("top", i, @category.articles.length) %>
+      <div class="article">
+        <%= image_tag(@category.articles[i].image, size: "200x150", alt: "#{@category.articles[i].title}", class: "image") %>
+        <article class="article-body">
+          <h2><%= @category.name %></h2>
+          <h3><%= @category.articles[i].title %></h3>
+          <p class="author">by &nbsp;<span class="name"><%= @category.articles[i].author.name %></span></p>
+          <p class="text"><%= @category.articles[i].text %></p>
+          <%= display_vote_for(@category.articles[i], current_user.id) %>
+        </article>
+      </div>
+    <%= article_row_decider("bottom", i, @category.articles.length) %>
+  <% end %>
 </section>
