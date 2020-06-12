@@ -1,12 +1,12 @@
 module ArticlesHelper
-  def article_row_decider(position, i, length)
+  def article_row_decider(position, index, length)
     html = ''
 
     case position
     when 'top'
-      html = "<div class='article-row'>" if i.even?
+      html = "<div class='article-row'>" if index.even?
     when 'bottom'
-      html = '</div>' if i.odd? || length == 1
+      html = '</div>' if index.odd? || length == 1
     end
 
     html.html_safe
