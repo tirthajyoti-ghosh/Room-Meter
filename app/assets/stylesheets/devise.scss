@@ -1,0 +1,162 @@
+body .devise-form {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f3f3;
+  overflow-y: hidden;
+}
+
+.devise-form .form-section {
+  max-width: 370px;
+  width: 40vw;
+  margin: auto;
+}
+
+.form-section .login-signup-logo {
+  width: 40%;
+  margin: 10px 30%;
+}
+
+.form-section h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.form-section small {
+  display: block;
+  margin: 10px 0 20px 0;
+}
+
+form .devise-field {
+  margin: 15px 0;
+}
+
+.devise-field .input {
+  padding: 9px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+}
+
+.devise-field em {
+  font-size: 13px;
+  color: #847f7b;
+}
+
+form .checkbox {
+  margin: 20px 0;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox .remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 105px;
+}
+
+.checkbox .forgot-pass {
+  color: #f99b00;
+}
+
+.actions .submit-btn {
+  padding: 10px;
+  width: 100%;
+  color: #fff;
+  background-color: #f99b00;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions .submit-btn:active {
+  background-color: #bd7400;
+}
+
+.bottom-link a {
+  color: #f99b00;
+}
+
+.devise-form .images {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images .col {
+  width: 18%;
+  margin-left: 12px;
+}
+
+.images .col:first-child {
+  margin-left: 38px;
+}
+
+.images .image {
+  width: 100%;
+  margin-bottom: 11px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.images .image-1 {
+  height: 48%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-2 {
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-3 {
+  height: 24%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-4 {
+  height: 48%;
+}
+
+.images .image-5 {
+  height: 24%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-6 {
+  height: 48%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-7 {
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-8 {
+  height: 24%;
+  border-radius: 0 0 10px 10px;
+}
+
+.images .image-9 {
+  height: 74%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.images .image-10 {
+  height: 48%;
+  border-radius: 0 0 0 10px;
+}
+
+.images .image-11 {
+  height: 50%;
+  border-radius: 10px 0 0 0;
+  margin-bottom: 0;
+}

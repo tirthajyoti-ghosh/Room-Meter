@@ -13,3 +13,213 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+body #notice {
+  text-align: center;
+  background-color: #fa6000;
+  color: #fff;
+  padding: 5px;
+  font-size: 15px;
+}
+
+form .alert {
+  background: #fae6e6;
+  position: relative;
+  padding: 0.5em 1em 0 2em;
+  margin: 0 0 0 0;
+  box-shadow: inset 6px 0 #c00;
+}
+
+.alert .danger {
+  position: relative;
+  top: 5px;
+  left: -5px;
+}
+
+.alert h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+  width: 80%;
+  top: -40px;
+  left: 70px;
+}
+
+.alert .alert-text {
+  margin-bottom: 0.5em;
+  position: relative;
+  top: -32px;
+  left: 70px;
+  width: 80%;
+}
+
+.alert .signup {
+  margin-bottom: 0.5em;
+  position: relative;
+  top: -32px;
+  left: 70px;
+  font-size: 14px;
+}
+
+.alert .alert-text::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #c00;
+  margin-bottom: 3px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+body .header {
+  display: flex;
+  background-color: white;
+  padding: 25px 20px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img {
+  width: 65px;
+  margin: -35px 10px;
+}
+
+.navbar .nav-list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.navbar .account {
+  color: #847f7a;
+  align-items: center;
+}
+
+.nav-list .nav-link {
+  color: #847f7b;
+  margin-left: 20px;
+}
+
+.account .name {
+  margin-right: 10px;
+}
+
+.account .logout {
+  margin-left: 10px;
+}
+
+.nav-list .active {
+  color: #fa6000;
+}
+
+.account .bar {
+  font-size: 15px;
+}
+
+.account .logout:hover {
+  color: #535353;
+}
+
+body main {
+  min-height: 80.7vh;
+}
+
+main .gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.85;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+body .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #4e443e;
+}
+
+.footer-logo img {
+  margin: -27px 10px;
+}
+
+.footer .footer-links {
+  display: flex;
+  padding-top: 6px;
+  font-size: 14px;
+  color: #fff;
+  width: 32%;
+  justify-content: space-between;
+}
+
+.footer .social-links {
+  width: 18%;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.footer-links .active {
+  color: #fa6000;
+}
+
+.social-links .icon {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #fa6000;
+  padding: 8px 11px;
+  font-size: 17px;
+  color: #4e443e;
+}
+
+.social-links .icon.twitter {
+  padding: 8px 10px;
+}
+
+.social-links .icon.instagram {
+  padding: 8px 10.5px;
+}
+
+.social-links .icon.facebook {
+  padding: 8px 12px;
+}

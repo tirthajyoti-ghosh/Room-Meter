@@ -1,0 +1,71 @@
+<% provide(:title, "Log in | Room-Meter") %>
+
+<section class="devise-form">
+  <div class="form-section">
+    <%= image_tag("logo.png", class: "login-signup-logo") %>
+
+    <h1>Welcome back</h1>
+    <small>Start your adventure</small>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <% if alert.present? %>
+        <div class="alert">
+          <svg class="danger" width="50" height="50" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#c00" d="M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z"></path></svg>
+          
+          <div class="alert-text"><%= alert %></div>
+        </div>
+      <% end %>
+
+      <div class="devise-field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email",class: "input", required: true %>
+      </div>
+
+      <div class="devise-field">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password",class: "input", required: true %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="devise-field checkbox">
+          <div class="remember">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Login", class: "submit-btn" %>
+      </div>
+    <% end %>
+
+    <small class="bottom-link">Don't have an account? <%= link_to "Click here", new_registration_path(resource_name) %></small>
+  </div>
+
+  <div class="images">
+    <div class="col">      
+      <img class="image image-1" src="https://source.unsplash.com/featured?sunset" alt="">
+      <img class="image image-2" src="https://source.unsplash.com/featured?winter" alt="">
+    </div>
+
+    <div class="col">
+      <img class="image image-3" src="https://source.unsplash.com/featured?lava" alt="">
+      <img class="image image-4" src="https://source.unsplash.com/featured?city,mosque" alt="">
+      <img class="image image-5" src="https://source.unsplash.com/featured?mosque" alt="">
+    </div>
+
+    <div class="col">
+      <img class="image image-6" src="https://source.unsplash.com/featured?new york" alt="">
+      <img class="image image-7" src="https://source.unsplash.com/featured?nasa" alt="">  
+    </div>
+
+    <div class="col">
+      <img class="image image-8" src="https://source.unsplash.com/featured?wallpaper" alt="">
+      <img class="image image-9" src="https://source.unsplash.com/featured?spacex" alt="">
+    </div>
+    
+    <div class="col">
+      <img class="image image-10" src="https://source.unsplash.com/featured?dome" alt="">
+      <img class="image image-11" src="https://source.unsplash.com/featured?tower" alt="">
+    </div>
+  </div>
+</section>

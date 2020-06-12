@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>RorCapstone</title>
+    <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
   </head>
 
   <body>
-    <%= yield %>
+    <% unless user_signed_in? %>
+      <% if notice.present? %>
+        <p id="notice"> <%= notice %></p>
+      <% end %>
+      
+      <%= yield %>
+    <% else %>
+      <header class="header">
+        <nav class="navbar">
+          <a href="<%= root_path %>" class="logo"><%= image_tag("logo.png") %></a>
+
+          <ul class="nav-list">
+            <li><%= link_to 'home', root_path, class: "nav-link #{yield(:index)}" %></li>
+            <li><%= link_to 'write new article', new_article_path, class: "nav-link #{yield(:new)}" %></li>
+          </ul>
+
+          <ul class="nav-list account">
+            <li class="nav-link name"><%= current_user.name.split(" ").first %></li>
+            <li class="bar">|</li>
+            <li class="nav-link logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <% if notice.present? %>
+          <p id="notice"> <%= notice %></p>
+        <% end %>
+        
+        <%= yield %>
+      </main>
+      
+      <footer class="footer">
+        <a href="<%= root_path %>" class="logo footer-logo"><%= image_tag("logo.png") %></a>
+
+        <ul class="footer-links">
+          <li><a href="/" class="active">Privacy Policy</a></li>
+          <li><a href="/" class="active">Terms &amp; Conditions</a></li>
+          <li>Copyright 2020. All rights reserved</li>
+        </ul>
+
+        <ul class="footer-links social-links">
+          <li>Connect with us:</li>
+          <li><a href="/" class="icon twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="/" class="icon instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="/" class="icon facebook"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+      </footer>
+    <% end %>
   </body>
 </html>
