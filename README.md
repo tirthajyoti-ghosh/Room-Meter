@@ -53,7 +53,7 @@ Its a hotel review articles site similar to any blog site.
 
 ## Video Presentation
 
-[Video Presentation](https://www.loom.com/share/99f9ba3cfd0b45cba24ee2519def6462)
+[Video Presentation](https://www.loom.com/share/586608a918e345468ab5ce2efecadd49)
 
 ## Getting Started
 
