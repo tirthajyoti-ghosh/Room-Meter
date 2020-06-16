@@ -2,7 +2,7 @@
 
 > This project it was built on top of my knowledge of RoR.
 
-![screenshot](https://user-images.githubusercontent.com/57726348/84240703-0a644980-ab1c-11ea-94bc-2194811b592e.jpg)
+![room-meter](https://user-images.githubusercontent.com/57726348/84763031-3b93bc80-afe9-11ea-9b06-7bc0ad429b6a.png)
 
 ## What it does
 
