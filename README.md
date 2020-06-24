@@ -99,6 +99,8 @@ Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
+Enter this command in your terminal to run pre-built tests:
+
 ``` bash
     rpsec
 ```
