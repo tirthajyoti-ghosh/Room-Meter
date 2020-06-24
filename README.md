@@ -1,6 +1,6 @@
 # Room Meter - RoR Capstone Project
 
-Room Meter is a hotel review site where users can create reviews in forms of articles and vote other reviews. The articles are divided in categories where one category can have many articles and one article can have many categoriesIt's built with Ruby on Rails framework by following the MVP pattern.
+Room Meter is a hotel review site where users can create reviews in forms of articles and vote other reviews. The articles are divided in categories where one category can have many articles and one article can have many categories. It's built with Ruby on Rails framework by following the MVP pattern.
 
 ![room-meter](https://user-images.githubusercontent.com/57726348/84763031-3b93bc80-afe9-11ea-9b06-7bc0ad429b6a.png)
 
